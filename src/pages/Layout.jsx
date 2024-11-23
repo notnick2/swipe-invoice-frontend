@@ -85,7 +85,7 @@ const Layout = () => {
       updateProcessingStatus();
 
       // Upload the files to the backend
-      const response = await axios.post('http://localhost:5000/upload', formData, {
+      const response = await axios.post('https://swipe-invoice-backend.onrender.com/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
