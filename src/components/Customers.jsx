@@ -3,12 +3,6 @@ import { useSelector } from 'react-redux';
 
 const Customers = () => {
  const customers = useSelector((state) => state.fileData.customers);
- const loading = useSelector((state) => state.fileData.loading);
- const error = useSelector((state) => state.fileData.error);
-
- if (loading) return <div className="w-full text-center p-4">Loading...</div>;
- if (error) return <div className="w-full text-center p-4 text-red-500">Error: {error}</div>;
- if (!customers?.length) return <div className="w-full text-center p-4">No customers found</div>;
 
  return (
    <div className="bg-white rounded-lg shadow w-full overflow-x-auto">
